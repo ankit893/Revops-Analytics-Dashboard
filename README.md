@@ -133,7 +133,7 @@ IFERROR(
 ### **Challenge 2: RFM Calculation at Scale**
 **Problem:** RFM formulas were slow with 500K rows  
 **Solution:** Moved heavy calculations to Power Query, used cached helper columns
-
+```
 ### **Challenge 3: Month-over-Month with Slicers**
 **Problem:** MoM % was empty when filtering by country  
 **Solution:** Used ALLEXCEPT to preserve country context
@@ -142,7 +142,7 @@ CALCULATE([Total Revenue],
     ALLEXCEPT(transactions, transactions[Country]),
     DATEADD(...)
 )
-
+```
 ### **Challenge 4: Cohort Retention Calculation**
 **Problem:** Couldn't track customers across cohort months  
 **Solution:** Created cohort month as separate dimension, used ALLEXCEPT
